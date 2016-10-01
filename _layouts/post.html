@@ -1,0 +1,71 @@
+---
+layout: default
+comments: true
+---
+<header style="background-image: url({{ site.baseurl }}{{ page.featured_image }});">
+  <div class="container post-container">
+    <div class="homerow">
+    <a href="{{ site.baseurl }}/" class="home_button"></a>
+    <div class="social-profiles">
+          {% include social.html %}
+    </div>
+    </div>
+    <div class="inner-container">
+      <h1>{{ page.title }}</h1>
+      <ul class="meta">
+        <li>
+          <span>
+            Published:
+          </span>
+          {{ page.date | date_to_string }}
+        </li>
+        <li>
+             {% include keywords.html %}
+        </li>
+      </ul>      
+    </div>
+    <ul class="pagination">
+      {% if page.previous.url %}
+        <li class="previous">
+          <a href="{{ site.baseurl }}{{ page.previous.url }}">
+            Previous
+          </a>
+        </li>
+      {% endif %}
+      {% if page.next.url %}
+      <li class="next">
+        <a href="{{ site.baseurl }}{{ page.next.url }}">
+          Next
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+      <img class="sakuva" src="{{ site.baseurl }}/images/sa-kuva2.png">
+  </div>
+</header>
+
+<article>
+  <div class="container">
+    {{ content }}
+
+
+    {% if page.comments and jekyll.environment == 'production' %}
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = "{{ page.url }}"; 
+            this.page.identifier = "{{ page.title }}"; 
+        };
+        (function() { 
+            var d = document, s = d.createElement('script');
+            
+            s.src = '//terisikk.disqus.com/embed.js';
+            
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+    {% endif %}
+  </div>
+</article>

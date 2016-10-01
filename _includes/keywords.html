@@ -1,0 +1,20 @@
+{% if post %}
+<span class="meta">
+{{ post.date | date_to_string }}<br>Keywords: 
+<em>
+{% for cat in post.categories %}
+{{ cat }}{% if forloop.index < forloop.length %},{% endif %}
+{% endfor %}
+</em>
+</span>
+{% elsif page %}
+<span>
+Keywords:
+</span>
+<em>
+{% for cat in page.categories %}
+{{ cat }}{% if forloop.index < forloop.length %},{% endif %}
+{% endfor %}
+</em>
+</span>
+{% endif %}
