@@ -7,7 +7,7 @@ sidebar_image: /images/trench3.jpg
 markdown: redcarpet
 highlighter: pygments
 
-baseurl: /blog # the subpath of your site, e.g. /blog/
+baseurl: / # the subpath of your site, e.g. /blog/
 timezone: Europe/Helsinki
 email: teemu.risikko@gmail.com
 description: >
