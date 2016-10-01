@@ -4,6 +4,7 @@ tagline: 'Breakpoints with a history' # A brief tagline for your site
 sidebar_image: /images/trench3.jpg
 
 # Build settings
+markdown: kramdown
 
 baseurl: / # the subpath of your site, e.g. /blog/
 timezone: Europe/Helsinki
