@@ -3,8 +3,8 @@ layout: post
 title: "About the blog"
 date: 2016-10-01 16:00:00 +0300
 categories: 
-- meta
-- about
+  - meta
+  - about
 
 featured_image: /images/trench3.jpg
 comments: true
