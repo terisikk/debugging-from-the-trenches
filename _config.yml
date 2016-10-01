@@ -4,14 +4,12 @@ tagline: 'Breakpoints with a history' # A brief tagline for your site
 sidebar_image: /images/trench3.jpg
 
 # Build settings
-markdown: redcarpet
-highlighter: pygments
 
 baseurl: / # the subpath of your site, e.g. /blog/
 timezone: Europe/Helsinki
 email: teemu.risikko@gmail.com
 description: >
   A blog about debugging, python and history.
-url: "http://terisikk.github.io"
+url: "https://terisikk.github.io"
 twitter_username: TeemuRisikko
 github_username: terisikk
