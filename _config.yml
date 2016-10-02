@@ -3,6 +3,8 @@ title: 'Debugging From the Trenches' # Your Title
 tagline: 'Breakpoints with a history' # A brief tagline for your site
 sidebar_image: /images/trench3.jpg
 
+permalink: /blog/:year/:month/:title.html
+
 # Build settings
 markdown: kramdown
 
