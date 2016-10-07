@@ -24,7 +24,8 @@ body {
 /* Type */
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -42,6 +43,13 @@ h2 {
   margin-top: 36px;
 }
 
+h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  margin-top: 20px;
+  font-style: italic;
+}
+
 blockquote {
   margin: 40px 1em;
   font-style: italic;
@@ -56,6 +64,11 @@ blockquote p {
   margin-left: 15px;
   padding-left: 5px;
   background-color: #fff
+}
+
+blockquote em {
+  font-style: normal;
+  font-weight: bolder;
 }
 
 @media (max-width: 960px) {
@@ -354,6 +367,15 @@ ul.posts p {
   margin-bottom: 36px;
 }
 
+ul {
+  margin-left: 1em;
+  padding-left: 10px;
+}
+
+ul li {
+  margin-left: 0px;
+}
+
 
 /* social profiles */
 
@@ -376,6 +398,26 @@ ul.posts p {
 
 .sakuva {
   position: absolute;
-  bottom: 10px;
+  bottom: 30px;
   right: 45%;
+}
+
+.output {
+  color: #000;
+  background-color: #f2dea4;
+  padding: 10px;
+}
+
+figure {
+  margin-left: 0px;
+  overflow: hidden;
+}
+
+figure img {
+  vertical-align: top;
+}
+
+figcaption{
+  font-size: 12px;
+  font-style: italic;
 }
