@@ -22,11 +22,11 @@ As we can see, this definition is quite broad, but that is also the reality: we 
 
 Bugs can also be classified by the effect the have on the software as whole, the so called _severity_ of a bug. Each project has its own classifications, but let me give you an example that is somewhat widely used:
 
-- _Blocker_: Bugs that prevent the program from working completely.
-- _Critical_: A large feature of the software is broken.
-- _Major_: The functionality does not meet the requirements.
-- _Minor_: Does not prevent the program from functioning.
-- _Trivial_: cosmetic or design errors. 
+*   _Blocker_: Bugs that prevent the program from working completely.
+*   _Critical_: A large feature of the software is broken.
+*   _Major_: The functionality does not meet the requirements.
+*   _Minor_: Does not prevent the program from functioning.
+*   _Trivial_: cosmetic or design errors. 
 
 Even this grouping is not set to stone. What makes a bug for example a blocker or a critical differs widely between projects, companies and teams.
 
@@ -42,9 +42,9 @@ That is actually nicely on par with the definition of debugging I came up with i
 
 The first thing you should do when encountering a bug is to assess the situation. Take time to identify these items:
 
-- How is the problem **reproduced**? What are the exact **steps and conditions** for it to occur?
-- What is the **expected** behavior of the program?
-- What is the **actual**, erroneous behavior?
+*   How is the problem **reproduced**? What are the exact **steps and conditions** for it to occur?
+*   What is the **expected** behavior of the program?
+*   What is the **actual**, erroneous behavior?
 
 If you are working in a ticket-based environment, the reporter of the bug might have already written these down. But even if you are not working with tickets, and even if you will be fixing the bug by yourself, you should make sure you know the answers to these questions. 
 
