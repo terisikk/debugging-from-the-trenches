@@ -21,6 +21,7 @@ So let's start with the basics:
 As we can see, this definition is quite broad, but that is also the reality: we often call it a bug no matter how the program is at fault. The term encompasses things like _crashes_, _faulty logic_, _unresponsiveness_, _access violations_, _graphical errors_ etc. However, when reporting and fixing bugs, it is definitely beneficial to be more precise about the nature of a fault. Being specific helps everyone involved to comprehend the situation better.
 
 Bugs can also be classified by the effect the have on the software as whole, the so called _severity_ of a bug. Each project has its own classifications, but let me give you an example that is somewhat widely used:
+
 - _Blocker_: Bugs that prevent the program from working completely.
 - _Critical_: A large feature of the software is broken.
 - _Major_: The functionality does not meet the requirements.
@@ -40,6 +41,7 @@ That is actually nicely on par with the definition of debugging I came up with i
 ## When the unexpected happens
 
 The first thing you should do when encountering a bug is to assess the situation. Take time to identify these items:
+
 - How is the problem **reproduced**? What are the exact **steps and conditions** for it to occur?
 - What is the **expected** behavior of the program?
 - What is the **actual**, erroneous behavior?
