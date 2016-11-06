@@ -59,8 +59,16 @@
 .highlight .vi { color: #008080 } /* Name.Variable.Instance */
 .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
 
-code { background: #eeeeee; font-family: monospace; padding: 2px;}
+code { background: #eeeeee; font-family: monospace; padding: 2px; overflow: auto}
+
+.language-python {
+    overflow: auto;
+}
 
 .highlight pre {
+    overflow: auto;
+}
+
+.highlight span {
     overflow: auto;
 }
