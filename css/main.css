@@ -279,10 +279,12 @@ header ul.meta li span {
 
 .previous {
   float: left;
+  z-index: 2
 }
 
 .next {
   float: right;
+  z-index: 2
 }
 
 .pagination a {
@@ -402,6 +404,7 @@ ul li {
   position: absolute;
   bottom: 30px;
   right: 45%;
+  z-index: 1
 }
 
 .output {
