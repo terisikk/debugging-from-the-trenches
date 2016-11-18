@@ -47,7 +47,7 @@ The second one looks much nicer. The prints are well formatted, timestamped and 
 
 Having a consistent format comes also handy when you want to filter and search the logs for some specific information - for example when debugging. As you might know, Linux command line has wonderful utilities for just that. Standard formatting and meaningful messages enable you to do things like these:
 
-`:~$ grep "ABCD" debug.log`
+`:~$ grep "Error" debug.log`
 
 `:-$ diff <(head debug.log | cut -f3-) <(head debug2.log | cut -f3-)`
 
@@ -56,4 +56,18 @@ These tools deserve a post or 10 by themselves, so I recommend you to read for e
 
 # Before vs After
 
-Another difference in debugging strategy between prints and logs is timing. Prints are usually inserted to debug a specific situation and only when you start debugging a problem. With logging we would _start_ the debugging with examining the logs that already exist, or at the very least reproduce the problem with logging enabled. By examining the logs we begin digging for clues about what might have happened in the code.
+Another difference in debugging strategy between prints and logs is timing. Prints are usually inserted to debug a specific situation and only when you start debugging a problem. With logging we would _start_ the debugging with examining the logs that already exist, or at the very least reproduce the problem with logging enabled. By examining the logs we start digging for clues about what might have happened in the code.
+
+# Do not hide errors, log them
+
+    Code example about printing "Error"
+
+This is a common example in beginner questions at StackOverflow. The developer has learned about `try-except`, but is actually hindering his/her own work by hiding the actual error and believing that just catching an exception will make the program work. Even more harmful from the debugging perspective is this:
+
+    Code example about passing the exception
+
+In actual production code these could be annoying issues. If the logs contain a notification about an error without any further detail, it could be very hard for the person debugging it to deduce what has actually happened, and even more so if the error is omitted.
+
+I always have hard time writing the `except`-block in Python correctly, usually I make a typo and write is as `expect`. But that is actually not that far from the truth. When using `try-except`, I _EXPECT_ that at some point this exception will be encountered. Still, I definitely do _not_ want to hide the fact that it happened. So better to log the trace so that I can notice the _expected_ has happened.
+
+    Code example about logging the trace
