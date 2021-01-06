@@ -28,7 +28,7 @@ Now I am become Death.
 Prints are a quick and easy way to get some feedback of the execution of your code. For example:
 
 ~~~ python
-{% include p2/ex1.py %}
+{% include debugging-from-the-trenches/p2/ex1.py %}
 ~~~
 
 would print `Enlisting...`, and we would know that the function `enlist` is really executed by studying the output of the program.
@@ -65,7 +65,7 @@ If you use a lot of prints to track down a problem, you will end up with a codeb
 
 At this point, having and _using_ a version control system (such as git) helps with the cleanup. We can use the VCS to get a diff of the project and to discard the changes to files where only prints were added, then manually remove the rest in the list (we *did* make a commit before starting the bug hunt, didn't we?). Debug-prints should definitely not be pushed to a central repository: they have the tendency to stay there and bother others. Make everyone a favor and just remove unnecessary prints if you encounter them.
 
-{% include captionimage.html src="p2/gitdiff.png" caption="With git diff you can easily track the changes to your files." %}
+{% include captionimage.html src="debugging-from-the-trenches/p2/gitdiff.png" caption="With git diff you can easily track the changes to your files." %}
 
 Having a huge amount of useless prints can actually even make the console cluttered with noise, making it hard to spot the _relevant_ prints. When you notice you are using a lot of prints and for some reason you also need to keep them, it is a good time to switch to a logging framework that will have useful features like different log levels and logging to a file. I will make a separate post of logging later. 
 
@@ -95,7 +95,7 @@ These are just basic examples, especially the newer ways are very flexible in wh
 When printing instances of your own classes, you have probably noticed that sometimes the output is not as helpful as you would like. Let's consider the following example:
 
 ~~~ python
-{% include p2/ex2.py %}
+{% include debugging-from-the-trenches/p2/ex2.py %}
 ~~~
 
 What this script will output is something like this:
@@ -108,7 +108,7 @@ So not very handy, at least from a debugger's point of view. Of course in the ca
 Let's first talk about `__str__`. `__str__` is one of Python's special methods or _dunders_ (double underscore). When implemented, the `__str__` method will be called for example when the value is printed or converted to a string with `str()`. It is of course expected that the method returns a string. `__str__` can be quite useful sometimes - you could do something like this:
 
 ~~~ python
-{% include p2/ex3.py %}
+{% include debugging-from-the-trenches/p2/ex3.py %}
 ~~~
 
 This would change the ouput to:
@@ -118,7 +118,7 @@ This would change the ouput to:
 However, `__str__`  will not work with the second case, for that you need `__repr__`. It is meant to be unambiguous, so define your `__repr__` to return a string that you expect to be unique. For example:
 
 ~~~ python
-{% include p2/ex4.py %}
+{% include debugging-from-the-trenches/p2/ex4.py %}
 ~~~
 
 Now the list would be printed like this:

@@ -12,6 +12,7 @@ timezone: Europe/Helsinki
 email: teemu.risikko@gmail.com
 description: >
   A blog about debugging, python and history.
-url: "https://terisikk.github.io"
+url: "https://terisikk.github.io/debugging-from-the-trenches/"
 twitter_username: TeemuRisikko
 github_username: terisikk
+baserl: debugging-from-the-trenches
