@@ -65,7 +65,7 @@ If you use a lot of prints to track down a problem, you will end up with a codeb
 
 At this point, having and _using_ a version control system (such as git) helps with the cleanup. We can use the VCS to get a diff of the project and to discard the changes to files where only prints were added, then manually remove the rest in the list (we *did* make a commit before starting the bug hunt, didn't we?). Debug-prints should definitely not be pushed to a central repository: they have the tendency to stay there and bother others. Make everyone a favor and just remove unnecessary prints if you encounter them.
 
-{% include captionimage.html src="debugging-from-the-trenches/p2/gitdiff.png" caption="With git diff you can easily track the changes to your files." %}
+{% include captionimage.html src="p2/gitdiff.png" caption="With git diff you can easily track the changes to your files." %}
 
 Having a huge amount of useless prints can actually even make the console cluttered with noise, making it hard to spot the _relevant_ prints. When you notice you are using a lot of prints and for some reason you also need to keep them, it is a good time to switch to a logging framework that will have useful features like different log levels and logging to a file. I will make a separate post of logging later. 
 
